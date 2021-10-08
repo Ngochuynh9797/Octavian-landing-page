@@ -1,0 +1,61 @@
+.team {
+    display: block;
+    background-color: $gray-lighter;
+    padding: 150px 0;
+    &-main {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0 30px;
+    }
+  
+    &-images {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+
+    }
+    &-column {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        gap:30px;
+    }
+
+  
+
+    &-desc {
+        font-size: 18px;
+        line-height: lineH(34,18);
+        margin-bottom: 60px;
+    }
+    
+    @include minWidth(1024px) {
+        &-content {
+            max-width: 370px;
+            flex-shrink: 0;
+            width: 100%;
+        }
+        &-images {
+            width: 100%;
+            max-width: 670px;
+        }
+    }
+
+    @include maxWidth(1023px) {
+        padding: 100px 0;
+        &-main {
+            flex-direction: column;
+            gap: 60px 0;
+        }
+    }
+
+    @include maxWidth(767px) {
+        padding: 50px 0;
+        &-desc {
+            margin-bottom:30px;
+        }
+    }
+}
